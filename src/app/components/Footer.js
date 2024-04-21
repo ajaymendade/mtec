@@ -1,10 +1,10 @@
 import React from 'react';
-import { Box, Grid, Link, Typography, useTheme } from '@mui/material';
+import { Box, Grid, Link, Typography, useTheme, useMediaQuery } from '@mui/material';
 import Image from 'next/image';
 
 function Footer() {
     const theme = useTheme();
-
+    const matches = useMediaQuery(theme.breakpoints.down('md'));
     const footerLinks = [
         { name: "Home", href: "/" },
         { name: "Events", href: "/events" },
@@ -15,14 +15,14 @@ function Footer() {
     return (
         <Box sx={{
             backgroundColor: theme.palette.background.default,
-            padding: theme.spacing(4),  // Increased padding for better spacing
-            color: theme.palette.text.primary,  // Ensure text color matches theme for consistency
+            padding: theme.spacing(matches ? 2 : 4), // Responsive padding
+            color: theme.palette.text.primary,
             borderTop: `3px solid ${theme.palette.divider}`,
-            fontSize: '1rem',  // Adjust base font size if necessary
-            paddingLeft: 20,
+            fontSize: matches ? '0.8rem' : '1rem', // Responsive font size
+            paddingLeft: 10,
             paddingRight: 10,
         }}>
-            <Grid container spacing={3} > 
+            <Grid container spacing={3}>
                 <Grid item xs={12} md={6}>
                     <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
                         Important Links
@@ -37,12 +37,12 @@ function Footer() {
                 </Grid>
                 <Grid item xs={12} md={6} sx={{
                     display: 'flex',
-                    flexDirection: 'row',
+                    flexDirection: 'column', // Change to column for better responsiveness on smaller screens
                     alignItems: 'center',
                     justifyContent: 'flex-start',
                 }}>
-                    <Image src="/images/mtec_logo.png" alt="Company Logo" width={200} height={200} />
-                    <Box sx={{ ml: 2 }}>
+                    <Image src="/images/mtec_logo.png" alt="Company Logo" width={matches ? 100 : 200} height={matches ? 100 : 200} />
+                    <Box sx={{ ml: matches ? 1 : 2 }}>
                         <Typography variant="subtitle1">
                             Matoshri Technical Event Cell
                         </Typography>
@@ -62,6 +62,7 @@ function Footer() {
             </Box>
         </Box>
     );
-}
+};
+
 
 export default Footer;
