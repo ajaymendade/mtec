@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
+
+
+
+::-webkit-scrollbar {
+  width: 12px; /* Adjust the width of the scrollbar */
+  height: 12px; /* For horizontal scrollbars */
+}
+
+::-webkit-scrollbar-track {
+  background: #1e1e1e; /* Light grey track */
+  border-radius: 50px; /* Fully rounded edges on the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e1e1e; /* Beautiful purple for the thumb */
+  border-radius: 10px; /* Fully rounded edges on the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1e1e1e; /* Slightly darker purple when hovered */
+}
+
+/* For Firefox */
+html {
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: #1e1e1e #1e1e1e; /* Thumb and track color */
+}
+
+
+
+
+@keyframes slideInDown {
+    from {
+      transform: translateY(-100px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+
+
+
+  
