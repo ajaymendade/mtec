@@ -15,10 +15,10 @@ function Footer() {
     return (
         <Box sx={{
             backgroundColor: theme.palette.background.default,
-            padding: theme.spacing(matches ? 2 : 4), // Responsive padding
+            padding: theme.spacing(matches ? 2 : 4), 
             color: theme.palette.text.primary,
             borderTop: `3px solid ${theme.palette.divider}`,
-            fontSize: matches ? '0.8rem' : '1rem', // Responsive font size
+            fontSize: matches ? '0.8rem' : '1rem', 
             paddingLeft: 10,
             paddingRight: 10,
         }}>
@@ -37,7 +37,7 @@ function Footer() {
                 </Grid>
                 <Grid item xs={12} md={6} sx={{
                     display: 'flex',
-                    flexDirection: 'column', // Change to column for better responsiveness on smaller screens
+                    flexDirection: 'column', 
                     alignItems: 'center',
                     justifyContent: 'flex-start',
                 }}>
