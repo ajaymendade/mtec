@@ -27,7 +27,7 @@ const CustomCursor = () => {
 
   return (
     <div
-      className={`custom-cursor ${clicked ? 'expand' : ''}`}
+      className={`custom-cursor ${clicked ? 'expand' && 'shrink': ''}`}
       style={{ left: `${position.x}px`, top: `${position.y}px` }}
     />
   );

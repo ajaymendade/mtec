@@ -15,6 +15,25 @@
   mix-blend-mode: difference; /* Optional, for cool visual effects */
 }
 
+.custom-cursor.shrink {
+  transform: translate(-50%, -50%) scale(0.9);
+  border-width: 1;
+  border-color: #fff;
+  transition-duration: 10ms;
+}
+
+.custom-cursor.shrink::after {
+  transform: translate(-50%, -50%) scale(0.9);
+  opacity: 1;
+  background:rgba(255, 255, 255, 0.3);
+}
+
+.custom-cursor.expand {
+  transform: translate(-50%, -50%) scale(1.2);
+  border-width: 4;
+  border-color: #fff;
+}
+
 .custom-cursor::after {
   content: '';
   position: absolute;
