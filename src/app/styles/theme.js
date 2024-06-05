@@ -35,7 +35,7 @@ const theme = createTheme({
     },    
   },
   typography: {
-    fontFamily: "Roboto",  // Keeping the same font style
+    fontFamily: "Roboto, sans-serif",  // Keeping the same font style
     h1: {
       fontWeight: 400,  // Suitable weight for headers
       fontSize: '2.5rem',  // Large size for primary headers
