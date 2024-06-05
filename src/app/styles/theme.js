@@ -1,4 +1,5 @@
 'use client';
+import { Opacity } from '@mui/icons-material';
 import { createTheme } from '@mui/material/styles';
 
 
@@ -37,13 +38,33 @@ const theme = createTheme({
   typography: {
     fontFamily: "Roboto, sans-serif",  // Keeping the same font style
     h1: {
-      fontWeight: 400,  // Suitable weight for headers
+      fontWeight: 700,  // Suitable weight for headers
       fontSize: '2.5rem',  // Large size for primary headers
+    },
+    h5:{
+      fontWeight: 700,  // Suitable weight for secondary headers
+      fontSize: '1.5rem',  // Medium size for secondary headers
     },
     body1: {
       fontWeight: 400,
       fontSize: '1rem',  // Standard size for body text
     },
+    tag:{
+      fontWeight: 500,
+      fontSize: '0.7rem',  // Small size for tags
+      color: '#ffffff',
+      opacity: 0.8,
+      backgroundBlendMode: 'multiply',
+      borderRadius: '3px',
+      padding: '2px 5px',
+      margin: '0 5px',
+      background: '#333333',
+      textTransform: 'uppercase',
+      
+      '&:hover': {  // fades out tags on mouse hover
+        opacity: 0.9,
+      }
+    }
   },
 });
 
